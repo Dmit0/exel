@@ -29,7 +29,7 @@ module.exports = {
     mode: 'development',
     entry: ['@babel/polyfill', './index.js'],
     output: {
-        filename: 'bundle.[hash].js',
+        filename: fileName('js'),
         path: path.resolve(__dirname, 'dist')
     },
     resolve: {
