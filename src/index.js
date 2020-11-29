@@ -1,9 +1,13 @@
+import { Excel } from "@/components/excel/Excel";
+import { Toolbar } from "@/components/toolbar/toolbar";
+import { Header } from "@/components/header/Header";
+import { Formula } from "@/components/fromula/formula";
+import { Table } from "@/components/table/Table";
 import './scss/index.scss'
 
-async function start() {
-   return await Promise.resolve('async')
-}
+const excel = new Excel('#app', {
+   components: [Header, Toolbar, Formula, Table]
+})
 
-start().then(console.log)
+excel.render()
 
-console.log('work')
